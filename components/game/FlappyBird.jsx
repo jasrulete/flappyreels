@@ -335,7 +335,7 @@ export default function FlappyBird({ onGameOver, onScoreUpdate }) {
                         className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-3xl"
                     >
                         <div className="bg-white rounded-2xl p-6 text-center shadow-2xl mx-4">
-                            <h2 className="text-3xl font-black text-gray-800 mb-2">Game Over!</h2>
+                            <h2 className="text-3xl font-black text-gray-800 mb-2">Bogo, try again!</h2>
                             <p className="text-5xl font-black text-amber-500 mb-1">{score}</p>
                             <p className="text-gray-500 mb-4">reels unlocked 🎉</p>
                             <button
