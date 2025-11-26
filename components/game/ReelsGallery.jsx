@@ -129,10 +129,16 @@ export default function ReelsGallery({ unlockedCount, isOpen, onClose }) {
                         </div>
                         
                         {/* Footer */}
-                        <div className="p-4 border-t bg-gray-50">
+                        <div className="p-4 border-t bg-gray-50 flex flex-col items-center gap-2">
                             <p className="text-center text-sm text-gray-500">
                                 Mag eskor ka para maka watch kana ng reels! 🎮
                             </p>
+                            <button
+                                onClick={onClose}
+                                className="mt-1 px-4 py-2 rounded-full text-sm font-semibold text-white bg-slate-800 hover:bg-slate-900 transition-colors"
+                            >
+                                Close
+                            </button>
                         </div>
                     </motion.div>
                 </motion.div>
