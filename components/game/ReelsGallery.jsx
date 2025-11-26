@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Play, Lock, Film, ExternalLink } from 'lucide-react';
 
@@ -26,6 +26,16 @@ export default function ReelsGallery({ unlockedCount, isOpen, onClose }) {
         window.open(`https://www.instagram.com/reel/${reel.id}/`, '_blank');
     };
 
+    // Prevent background (page) from scrolling when modal is open
+    useEffect(() => {
+        if (!isOpen) return;
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        return () => {
+            document.body.style.overflow = previousOverflow;
+        };
+    }, [isOpen]);
+
     return (
         <AnimatePresence>
             {isOpen && (
@@ -44,7 +54,7 @@ export default function ReelsGallery({ unlockedCount, isOpen, onClose }) {
                         onClick={e => e.stopPropagation()}
                     >
                         {/* Header */}
-                        <div className="bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 p-6 text-white">
+                        <div className="mt-60 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 p-6 text-white">
                             <div className="flex items-center justify-between">
                                 <div>
                                     <h2 className="text-2xl font-black flex items-center gap-2">
