@@ -82,7 +82,7 @@ export default function ReelsGallery({ unlockedCount, isOpen, onClose }) {
                                         <Lock className="w-10 h-10 text-gray-400" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-800 mb-2">No Reels Yet!</h3>
-                                    <p className="text-gray-500">Play the game to unlock reels to watch</p>
+                                    <p className="text-gray-500">pagdola to unlock reels to watch</p>
                                 </div>
                             ) : (
                                 <div className="grid grid-cols-3 gap-3">
@@ -131,7 +131,7 @@ export default function ReelsGallery({ unlockedCount, isOpen, onClose }) {
                         {/* Footer */}
                         <div className="p-4 border-t bg-gray-50">
                             <p className="text-center text-sm text-gray-500">
-                                Score more points to unlock more reels! 🎮
+                                Mag eskor ka para maka watch kana ng reels! 🎮
                             </p>
                         </div>
                     </motion.div>

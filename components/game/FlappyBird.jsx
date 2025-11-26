@@ -306,6 +306,8 @@ export default function FlappyBird({ onGameOver, onScoreUpdate }) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         className="absolute inset-0 flex flex-col items-center justify-center"
+                        onClick={handleInteraction}
+                        onTouchStart={handleInteraction}
                     >
                         <motion.div 
                             animate={{ y: [0, -10, 0] }}
